@@ -1,0 +1,86 @@
+.panel-body {
+    padding: 0px;
+}
+
+#createDiv {
+    padding: 10px 0 10px;
+    text-align: right;
+}
+
+#searchDiv {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+#searchDiv > div {
+    margin-bottom: -10px;
+}
+
+#searchDiv > div > label {
+    margin-left: 10px;
+}
+
+#searchBtn, #resetBtn { 
+    margin-top: 25px;
+}
+
+.form-justified textarea {
+    height: 150px;
+    width: 430px;
+}
+
+#searchDiv input[type=text] {
+    width: 160px !important;
+}
+
+#titleView input[type=text] {
+    width: 300px !important;
+}
+
+#searchTable a.buttonSize {
+    font-size: 18px;
+    padding: 0 6px;
+    color: cadetblue;
+}
+
+#searchTable span.expandPipe {
+    color: #d3d3d3e8;
+    vertical-align: 2px;
+    margin: 0 -3px;
+}
+
+#searchTable a.buttonSize:hover {
+    background-color: #efefef;
+    border-radius: 3px;;
+}
+
+.modal {
+    width: 700px;
+}
+
+.modal input[type=text] {
+    width: 430px;
+}
+
+.modal input[type=text]::placeholder {
+    color: #d3d3d3;
+}
+
+.modal-header {
+    border-bottom: 1px solid #efefef;
+}
+
+#inputView .modal-body {
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+.modal-footer {
+    border-top: 1px solid #efefef;
+}
+
+.timeInputs {
+    padding: 0 10px;
+}

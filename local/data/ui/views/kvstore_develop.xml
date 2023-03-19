@@ -1,0 +1,141 @@
+<dashboard script="kvstore_develop.js" stylesheet="kvstore_develop.css" hideEdit="true">
+    <label>KVStore Data Manage</label>
+    <row>
+        <panel>
+            <html>
+                <div id="createDiv">
+                    <button type="button" class="btn btn-primary" data-target="#inputView" id="createBtn">Data 등록</button>
+                </div>
+                <div id="searchDiv">
+                    
+                    <div>
+                        <label>Data1</label>
+                        <div id="data1View" />
+                    </div>
+                    <div>
+                        <label>Data2</label>
+                        <div id="data2View" />
+                    </div>
+                    <div>
+                        <label>Data3</label>
+                        <div id="data3View" />
+                    </div>
+                    <div>
+                        <label>Data4</label>
+                        <div id="data4View" />
+                    </div>
+                    <div style="padding-left: 10px">
+                        <button type="button" class="btn btn-primary" id="searchBtn"><i class="icon-search-thin" /></button>
+                    </div>
+                </div>
+
+                <div id="searchTable" />
+
+
+                <!-- Modal form popup -->
+                <div class="modal fade" id="inputView" data-toggle="modal" role="dialog" aria-hidden="true" style="display:none">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <form name="create_new_form" id="inputForm">
+                                <div class="modal-header">
+                                    <button type="button" class="close" dat-dismiss="modal"><![CDATA[&times;]]></button>
+                                    <h4 class="modal-title" id="modalTitle" />
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form form-horizontal form-justified">
+                                        <input type="hidden" id="actionType" />
+                                        <input type="hidden" id="_key" name="_key" />
+
+                                        <div class="control-group shared-controls-controlgroup control-group-default">
+                                            <label class="control-label">Data 1</label>
+                                            <div class="controls">
+                                                <div class="control shared-controls-textcontrol control-default">
+                                                    <span class="uneditable-input" data-roles="uneditable-input" style="display:none" />
+                                                    <input type="text" id="data1" name="data1" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group shared-controls-controlgroup control-group-default">
+                                            <label class="control-label">Data 2</label>
+                                            <div class="controls">
+                                                <div class="control shared-controls-textcontrol control-default">
+                                                    <span class="uneditable-input" data-roles="uneditable-input" style="display:none" />
+                                                    <input type="text" id="data2" name="data2" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group shared-controls-controlgroup control-group-default">
+                                            <label class="control-label">Data 3</label>
+                                            <div class="controls">
+                                                <div class="control shared-controls-textcontrol control-default">
+                                                    <span class="uneditable-input" data-roles="uneditable-input" style="display:none" />
+                                                    <input type="text" id="data3" name="data3" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group shared-controls-controlgroup control-group-default">
+                                            <label class="control-label">Data 4</label>
+                                            <div class="controls">
+                                                <div class="control shared-controls-textcontrol control-default">
+                                                    <span class="uneditable-input" data-roles="uneditable-input" style="display:none" />
+                                                    <select id="data4" name="data4">
+                                                        <option value="Test Data 1" selected="selected">Test Data 1</option>
+                                                        <option value="Test Data 2">Test Data 2</option>
+                                                        <option value="Test Data 3">Test Data 3</option>
+                                                        <option value="Test Data 4">Test Data 4</option>
+                                                        <option value="Test Data 5">Test Data 5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group shared-controls-controlgroup control-group-default">
+                                            <label class="control-label">Data 5</label>
+                                            <div class="controls">
+                                                <div class="control shared-controls-textcontrol control-default">
+                                                    <span class="uneditable-input" data-roles="uneditable-input" style="display:none" />
+                                                    <textarea type="text" id="data5" name="data5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" id="cancel">취소</button>
+                                    <button type="submit" class="btn btn-primary modal-btn-primary" id="submitBtn">저장</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal -->
+
+                <!-- Modal acknowledge popup -->
+                <div class="modal fade" id="acknowledge" role="dialog" aria-hidden="true" style="display:none">
+                    <div class="modal-dialog">
+                        <!-- modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" dat-dismiss="modal"><![CDATA[&times;]]></button>
+                                <h4 class="modal-title" id="popupTitle">Status</h4>
+                            </div>
+                            <div class="modal-body">
+                                <label class="control-label" id="popupMessage"> </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="close" class="btn btn-primary modal-btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>  
+                </div>
+                <!-- End of Modal -->
+            </html>
+        </panel>
+    </row>
+</dashboard>
